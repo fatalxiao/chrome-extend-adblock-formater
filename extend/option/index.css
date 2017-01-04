@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #f1f1f1;
+}
+textarea {
+	position: absolute;
+	margin: 20px;
+	width: calc(50% - 170px);
+	min-width: calc(50% - 170px);
+	max-width: calc(50% - 170px);
+	height: calc(100% - 52px);
+	min-height: calc(100% - 52px);
+	max-height: calc(100% - 52px);
+	font-family: sans-serif;
+	padding: 5px 9px 5px 60px;
+	white-space: nowrap;
+	border: 1px solid #ccc;
+	font-size: 14px;
+	line-height: 18px;
+	color: #555;
+	border-radius: 2px;
+}
+textarea#source {
+	left: 0;
+}
+textarea#result {
+	left: calc(50% + 60px);
+}
+.lineNumbersWrap {
+	position: absolute;
+	top: 21px;
+	width: 50px;
+	padding: 5px 0;
+	height: calc(100% - 52px);
+	background: #f4f4f4;
+	overflow: hidden;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+}
+.lineNumbersWrap#sourceLineNumbers {
+	left: 21px;
+}
+.lineNumbersWrap#resultLineNumbers {
+	left: calc(50% + 81px);
+}
+.lineNumbers {
+	position: relative;
+	width: 100%;
+}
+.lineNumbers .number {
+	width: 40px;
+	height: 18px;
+	padding: 0 5px;
+	text-align: right;
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #888;
+}
+button#format {
+	font-family: sans-serif;
+	position: absolute;
+	left: calc(50% - 60px);
+	top: calc(50% - 25px);
+	width: 120px;
+	height: 50px;
+	cursor: pointer;
+	background: #42A5F5;
+	border: 0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 2px;
+	outline: none;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px, rgba(0, 0, 0, 0.2) 0px 1px 4px;
+}
+button#format:hover {
+	background: #51ACF6;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 18px, rgba(0, 0, 0, 0.2) 0px 1px 12px;
+}
+button#format:active {
+	background: #3F98E1;
+	box-shadow: rgba(0, 0, 0, 0) 0px 1px 6px, rgba(0, 0, 0, 0) 0px 1px 4px;
+}
+#formatInfo {
+	position: absolute;
+	left: calc(50% - 60px);
+	top: calc(50% + 40px);
+	width: 120px;
+	text-align: center;
+	font-size: 14px;
+	line-height: 24px;
+	color: #555;
+}
+#formatInfo span {
+	color: #42A5F5;
+	font-weight: bold;
+	margin: 0 4px;
+}
