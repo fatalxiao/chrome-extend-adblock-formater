@@ -1,15 +1,16 @@
 var FormatHandle = {
 
 	/**
-	 * 域名后缀
+	 * domain suffix
 	 */
-	domain: ['asia', 'band', 'bid', 'biz', 'cc', 'click', 'club', 'cn', 'co', 'com', 'date', 'design', 'engineer', 'gift', 'gov.cn', 'help',
-		'info', 'lawyer', 'link', 'live', 'loan', 'market', 'me', 'mobi', 'name', 'net', 'news', 'online', 'org', 'party', 'photo', 'pics', 'press',
-		'pub', 'red', 'ren', 'rocks', 'science', 'site', 'so', 'social', 'software', 'space', 'studio', 'tech', 'top', 'trade', 'tv', 'video', 'wang',
-		'website', 'wiki', 'win', 'xin', 'xyz'],
+	domain: ['asia', 'band', 'bid', 'biz', 'cc', 'click', 'club', 'cn', 'co', 'com', 'date', 'design', 'engineer',
+		'gift', 'gov.cn', 'help', 'info', 'lawyer', 'link', 'live', 'loan', 'market', 'me', 'mobi', 'name', 'net',
+		'news', 'online', 'org', 'party', 'photo', 'pics', 'press', 'pub', 'red', 'ren', 'rocks', 'science', 'site',
+		'so', 'social', 'software', 'space', 'studio', 'tech', 'top', 'trade', 'tv', 'video', 'wang', 'website',
+		'wiki', 'win', 'xin', 'xyz'],
 
 	/**
-	 * 判断是否为域名后缀
+	 * check whether the text is domain
 	 * @param value
 	 * @returns {boolean}
 	 */
@@ -30,7 +31,7 @@ var FormatHandle = {
 	},
 
 	/**
-	 * 格式化，并返回是否有改变
+	 * format text and return whether the text is formated
 	 * @param value
 	 * @returns {{result: *, info: {hasFormat: boolean}}}
 	 */
@@ -66,7 +67,7 @@ var FormatHandle = {
 	},
 
 	/**
-	 * 格式化全部，并返回改变数
+	 * format all and return formated count
 	 * @param source
 	 * @returns {{result: Array, info: {count: number}}}
 	 */
@@ -91,7 +92,7 @@ var FormatHandle = {
 	},
 
 	/**
-	 * 排序
+	 * sort list
 	 * @param array
 	 * @returns {*|Array.<T>}
 	 */
@@ -102,7 +103,7 @@ var FormatHandle = {
 	},
 
 	/**
-	 * 去重，并返回改变数
+	 * distinct list
 	 * @param array
 	 * @returns {{result: Array, info: {count: number}}}
 	 */

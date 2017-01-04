@@ -1,76 +1,76 @@
-var textareaSource = $('#source');
-var textareaResult = $('#result');
-var formatInfo = $('#formatInfo');
+$(() => {
 
-/**
- * 格式化
- */
-$('#format').click(function () {
+	const textareaSource = $('#source');
+	const textareaResult = $('#result');
+	const formatInfo = $('#formatInfo');
 
-	var source = textareaSource.val().split('\n'), formatCount, uniqueCount;
+	$('#format').click(() => {
 
-	var formatResult = FormatHandle.formatAll(source);
-	formatCount = formatResult.info.count;
+		let source = textareaSource.val().split('\n'), formatCount, uniqueCount;
 
-	var uniqueResut = FormatHandle.unique(FormatHandle.sort(formatResult.result));
-	uniqueCount = uniqueResut.info.count;
+		let formatResult = FormatHandle.formatAll(source);
+		formatCount = formatResult.info.count;
 
-	textareaResult.val(uniqueResut.result.join('\n'));
-	LineNumber.createNumber(uniqueResut.result.length, $('#resultLineNumbers .lineNumbers'));
+		let uniqueResut = FormatHandle.unique(FormatHandle.sort(formatResult.result));
+		uniqueCount = uniqueResut.info.count;
 
-	formatInfo.html('格式化<span>' + formatCount + '</span>条<br/>去重<span>' + uniqueCount + '</span>条');
+		textareaResult.val(uniqueResut.result.join('\n'));
+		LineNumber.createNumber(uniqueResut.result.length, $('#resultLineNumbers .lineNumbers'));
 
-});
+		formatInfo.html('format<span>' + formatCount + '</span><br/>distinct<span>' + uniqueCount + '</span>');
 
-$('#source').keydown(function (e) {
-	var self = this;
-	if (e.ctrlKey == true && e.keyCode == 86) {
-		var numberInterval = setInterval(function () {
-			var value = $(self).val();
-			if (value) {
-				clearInterval(numberInterval);
-				LineNumber.createNumber(value.split('\n').length, $('#sourceLineNumbers .lineNumbers'));
-			}
-		}, 0);
-	}
-});
+	});
 
-var sourceValue = '';
-setInterval(function () {
-	var value = $('#source').val();
-	if (value != sourceValue) {
-		sourceValue = value;
-		LineNumber.createNumber(value.split('\n').length, $('#sourceLineNumbers .lineNumbers'));
-	}
-}, 0);
+	$('#source').keydown(e => {
+		const self = this;
+		if (e.ctrlKey == true && e.keyCode == 86) {
+			let numberInterval = setInterval(function () {
+				let value = $(self).val();
+				if (value) {
+					clearInterval(numberInterval);
+					LineNumber.createNumber(value.split('\n').length, $('#sourceLineNumbers .lineNumbers'));
+				}
+			}, 0);
+		}
+	});
 
-$('#source').scroll(function (e) {
-	$('#sourceLineNumbers .lineNumbers').css('top', -e.target.scrollTop);
-});
+	let sourceValue = '';
+	setInterval(() => {
+		let value = $('#source').val();
+		if (value != sourceValue) {
+			sourceValue = value;
+			LineNumber.createNumber(value.split('\n').length, $('#sourceLineNumbers .lineNumbers'));
+		}
+	}, 0);
 
+	$('#source').scroll(e => {
+		$('#sourceLineNumbers .lineNumbers').css('top', -e.target.scrollTop);
+	});
 
-$('#result').keydown(function (e) {
-	var self = this;
-	if (e.ctrlKey == true && e.keyCode == 86) {
-		var numberInterval = setInterval(function () {
-			var value = $(self).val();
-			if (value) {
-				clearInterval(numberInterval);
-				LineNumber.createNumber(value.split('\n').length, $('#resultLineNumbers .lineNumbers'));
-			}
-		}, 0);
-	}
-});
+	$('#result').keydown(e => {
+		const self = this;
+		if (e.ctrlKey == true && e.keyCode == 86) {
+			let numberInterval = setInterval(function () {
+				let value = $(self).val();
+				if (value) {
+					clearInterval(numberInterval);
+					LineNumber.createNumber(value.split('\n').length, $('#resultLineNumbers .lineNumbers'));
+				}
+			}, 0);
+		}
+	});
 
-var resultValue = '';
-setInterval(function () {
-	var value = $('#result').val();
-	if (value != resultValue) {
-		resultValue = value;
-		LineNumber.createNumber(value.split('\n').length, $('#resultLineNumbers .lineNumbers'));
-	}
-}, 0);
+	let resultValue = '';
+	setInterval(() => {
+		let value = $('#result').val();
+		if (value != resultValue) {
+			resultValue = value;
+			LineNumber.createNumber(value.split('\n').length, $('#resultLineNumbers .lineNumbers'));
+		}
+	}, 0);
 
-$('#result').scroll(function (e) {
-	$('#resultLineNumbers .lineNumbers').css('top', -e.target.scrollTop);
+	$('#result').scroll(e => {
+		$('#resultLineNumbers .lineNumbers').css('top', -e.target.scrollTop);
+	});
+
 });

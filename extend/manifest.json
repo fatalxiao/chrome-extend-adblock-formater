@@ -1,7 +1,7 @@
 {
-	"name": "AdBlock format",
+	"name": "AdBlock Formater",
 	"version": "1.0",
-	"description": "AdBlock format",
+	"description": "A Chrome extend to format adblock custom list.",
 	"icons": {
 		"128": "icons/icon128.png",
 		"16": "icons/icon16.png",
@@ -18,7 +18,7 @@
 			"19": "icons/icon19.png",
 			"38": "icons/icon38.png"
 		},
-		"default_title": "Adblock Format 1.0"
+		"default_title": "Adblock Formater 1.0"
 	},
 	"permissions": [
 		"tabs"
