@@ -1,0 +1,13 @@
+@import './common.scss';
+.FPS {
+	width: 60px;
+	height: 30px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -30px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 20px;
+	color: $primaryColor;
+}

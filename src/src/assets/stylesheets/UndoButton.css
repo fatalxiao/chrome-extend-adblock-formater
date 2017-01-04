@@ -1,0 +1,11 @@
+/* line 2, ../sass/UndoButton.scss */
+.UndoButton {
+  width: 30px;
+  height: 30px;
+}
+/* line 6, ../sass/UndoButton.scss */
+.UndoButton i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}

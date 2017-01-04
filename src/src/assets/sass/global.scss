@@ -1,0 +1,43 @@
+@import './common.scss';
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-track-piece {
+	background-color: #F0F3F4;
+}
+::-webkit-scrollbar-thumb:vertical {
+	height: 8px;
+	min-height: 36px;
+	background-color: #CEDBE7;
+	-webkit-border-radius: 2px;
+	-webkit-transition: .8s all;
+}
+::-webkit-scrollbar-thumb:vertical:hover {
+	background-color: #91A8BC;
+}
+::selection {
+	color: #fff;
+	background: $primaryColor;
+}
+* {
+	font-family: "Microsoft YaHei", sans-serif;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background: #f1f1f1;
+}
+textarea, input, button {
+	outline: none;
+}
+.hidden {
+	display: none !important;
+}
+#textTemp {
+	visibility: hidden;
+}
+#textTemp .hidden {
+	visibility: hidden;
+	display: none;
+}

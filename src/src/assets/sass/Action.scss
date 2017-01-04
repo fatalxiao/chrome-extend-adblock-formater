@@ -1,0 +1,108 @@
+@import './common.scss';
+.Action {
+	position: absolute;
+	left: calc(50% - 100px);
+	top: calc(50% - 80px);
+	width: 200px;
+
+	button {
+		position: absolute;
+		cursor: pointer;
+		background: $primaryColor;
+		border: 0;
+		border-radius: 2px;
+		outline: none;
+		padding: 0;
+		box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px, rgba(0, 0, 0, 0.2) 0px 1px 4px;
+
+		i::before {
+			text-align: center;
+			color: #fff;
+		}
+
+		&:hover {
+			background: darken($primaryColor, 5%);
+			box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 18px, rgba(0, 0, 0, 0.2) 0px 1px 12px;
+		}
+
+		&:active {
+			background: darken($primaryColor, 10%);
+			box-shadow: rgba(0, 0, 0, 0) 0px 1px 6px, rgba(0, 0, 0, 0) 0px 1px 4px;
+		}
+
+		&[disabled] {
+			background: #e5e5e5;
+			color: #f0f0f0;
+			border: 1px solid #ddd;
+			box-shadow: none;
+			cursor: auto;
+		}
+
+		&[disabled]:hover {
+			background: #e5e5e5;
+		}
+
+		&[disabled]:active {
+			background: #e5e5e5;
+		}
+	}
+
+	.actions {
+		width: 200px;
+		height: 90px;
+
+		.ResetButton {
+			top: 0;
+			left: 85px;
+		}
+
+		.UndoButton {
+			top: 50px;
+			left: 0;
+		}
+
+		.FormatButton {
+			top: 40px;
+			left: 40px;
+		}
+
+		.RedoButton {
+			top: 50px;
+			right: 0;
+		}
+	}
+
+	.result {
+		width: 200px;
+
+		.formatInfo {
+			width: 200px;
+			margin-top: 12px;
+			font-size: 16px;
+
+			.formatCount, .distinctCount {
+				width: 100%;
+				height: 24px;
+				line-height: 24px;
+				text-align: center;
+				color: #555;
+
+				.count {
+					color: $primaryColor;
+					font-weight: bold;
+					margin-left: 6px;
+				}
+			}
+
+			&.hidden {
+				display: none;
+			}
+		}
+
+		.CopyButton {
+			position: static;
+			margin: 10px 80px 0;
+		}
+	}
+
+}

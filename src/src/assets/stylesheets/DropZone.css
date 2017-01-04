@@ -1,0 +1,71 @@
+/* line 2, ../sass/DropZone.scss */
+.DropZone {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+/* line 8, ../sass/DropZone.scss */
+.DropZone * {
+  pointer-events: none;
+}
+/* line 12, ../sass/DropZone.scss */
+.DropZone .imageWrap {
+  width: 100%;
+  height: 100%;
+}
+/* line 16, ../sass/DropZone.scss */
+.DropZone .imageWrap > * {
+  float: left;
+}
+/* line 20, ../sass/DropZone.scss */
+.DropZone .imageWrap .top, .DropZone .imageWrap .bottom {
+  width: 100%;
+  height: calc(50% - 80px);
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 26, ../sass/DropZone.scss */
+.DropZone .imageWrap .left, .DropZone .imageWrap .right {
+  width: calc(50% - 200px);
+  height: 160px;
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 32, ../sass/DropZone.scss */
+.DropZone .imageWrap .center {
+  width: 400px;
+  height: 160px;
+  background: url(../images/drag&drop.min.png);
+  opacity: .7;
+}
+/* line 40, ../sass/DropZone.scss */
+.DropZone .wrap {
+  width: 400px;
+  height: 160px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -80px 0 0 -200px;
+}
+/* line 48, ../sass/DropZone.scss */
+.DropZone .wrap i {
+  width: 100%;
+  height: 100px;
+  font-size: 120px;
+  color: #053b66;
+  text-align: center;
+  line-height: 100px;
+}
+/* line 57, ../sass/DropZone.scss */
+.DropZone .wrap .text {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #053b66;
+}
+/* line 68, ../sass/DropZone.scss */
+.DropZone.hidden {
+  display: none;
+}

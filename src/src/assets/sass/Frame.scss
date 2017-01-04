@@ -1,0 +1,18 @@
+.Frame {
+	position: absolute;
+	margin: 20px;
+	width: calc(50% - 140px);
+	height: calc(100% - 40px);
+	border-radius: 2px;
+	background: #fff;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px, rgba(0, 0, 0, 0.2) 0px 1px 4px;
+	overflow: visible;
+
+	&[type=source] {
+		left: 0;
+	}
+
+	&[type=result] {
+		left: calc(50% + 100px);
+	}
+}

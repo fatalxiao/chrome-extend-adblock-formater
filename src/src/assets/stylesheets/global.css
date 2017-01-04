@@ -1,0 +1,63 @@
+/* line 2, ../sass/global.scss */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* line 6, ../sass/global.scss */
+::-webkit-scrollbar-track-piece {
+  background-color: #F0F3F4;
+}
+
+/* line 9, ../sass/global.scss */
+::-webkit-scrollbar-thumb:vertical {
+  height: 8px;
+  min-height: 36px;
+  background-color: #CEDBE7;
+  -webkit-border-radius: 2px;
+  -webkit-transition: .8s all;
+}
+
+/* line 16, ../sass/global.scss */
+::-webkit-scrollbar-thumb:vertical:hover {
+  background-color: #91A8BC;
+}
+
+/* line 19, ../sass/global.scss */
+::selection {
+  color: #fff;
+  background: #42a5f5;
+}
+
+/* line 23, ../sass/global.scss */
+* {
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* line 26, ../sass/global.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+}
+
+/* line 31, ../sass/global.scss */
+textarea, input, button {
+  outline: none;
+}
+
+/* line 34, ../sass/global.scss */
+.hidden {
+  display: none !important;
+}
+
+/* line 37, ../sass/global.scss */
+#textTemp {
+  visibility: hidden;
+}
+
+/* line 40, ../sass/global.scss */
+#textTemp .hidden {
+  visibility: hidden;
+  display: none;
+}

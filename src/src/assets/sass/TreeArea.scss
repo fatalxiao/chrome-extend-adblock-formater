@@ -1,0 +1,43 @@
+.TreeArea {
+	position: relative;
+	width: 100%;
+	height: calc(100% - 40px);
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+
+	.lineNumberBackground {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 80px;
+		height: 100%;
+		box-sizing: border-box;
+		border-right: 1px solid #ddd;
+		border-top-left-radius: 2px;
+		border-bottom-left-radius: 2px;
+		background: #f4f4f4;
+	}
+
+	.treeListWrap {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		z-index: 1;
+		//will-change: scroll-position;
+
+		.treeList {
+			width: 100%;
+			white-space: nowrap;
+			border: none;
+			font-size: 14px;
+			line-height: 25px;
+			color: #666;
+			border-bottom-right-radius: 2px;
+			cursor: text;
+			position: relative;
+		}
+
+	}
+}
