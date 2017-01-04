@@ -1,7 +1,7 @@
 {
-	"name": "adblock-format",
+	"name": "adBlock-formater-2",
 	"version": "2.0.0",
-	"description": "adblock format",
+	"description": "A Chrome extend to format adblock custom list.",
 	"scripts": {
 		"dev": "node build/server.js",
 		"build": "node build/build.js"
