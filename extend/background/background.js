@@ -9,11 +9,11 @@ chrome.browserAction.onClicked.addListener(() => {
 			return tab.url.includes(optionUrl);
 		});
 
-		if (optionTab.length > 0) { // 如果当前窗口中有已经打开的窗口，切换到此窗口
+		if (optionTab.length > 0) { // active tab if option page has been opened in this window
 			chrome.tabs.update(optionTab[0].id, {
 				selected: true
 			});
-		} else { // 不然打开新窗口
+		} else { // else open new tab of option page
 			chrome.tabs.create({
 				url: optionUrl,
 				selected: true

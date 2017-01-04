@@ -1,7 +1,7 @@
 const FormatHandle = {
 
 	/**
-	 * 域名后缀
+	 * domain suffix
 	 */
 	domain: ['asia', 'band', 'bid', 'biz', 'cc', 'click', 'club', 'cn', 'co', 'com', 'date', 'design', 'engineer', 'gift', 'gov.cn', 'help',
 		'info', 'lawyer', 'link', 'live', 'loan', 'market', 'me', 'mobi', 'name', 'net', 'news', 'online', 'org', 'party', 'photo', 'pics', 'press',
