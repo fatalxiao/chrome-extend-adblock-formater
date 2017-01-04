@@ -1,0 +1,242 @@
+@import './common.scss';
+.Editor {
+	width: 100%;
+	height: 100%;
+	background: $editorBackgroundColor;
+	font-family: consola, sans-serif;
+	font-size: 16px;
+	overflow: hidden;
+
+	.gutter {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		background: #f0f0f0;
+		font-family: inherit;
+	}
+
+	.scroller {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		-webkit-user-select: none;
+		user-select: none;
+		cursor: text;
+		font-family: inherit;
+
+		//.scroller-content {
+		//	position: absolute;
+		//	box-sizing: border-box;
+		//	min-width: 100%;
+		//	font-family: inherit;
+
+		.text-input {
+			position: absolute;
+			z-index: 999;
+			opacity: 0;
+			background: transparent;
+			-webkit-appearance: none;
+			appearance: none;
+			border: none;
+			resize: none;
+			outline: none;
+			overflow: hidden;
+			padding: 0;
+			width: 0;
+			height: 0;
+		}
+
+		.layer {
+			z-index: 1;
+			position: absolute;
+			overflow: hidden;
+			word-wrap: normal;
+			white-space: pre;
+			height: 100%;
+			width: 100%;
+			box-sizing: border-box;
+			pointer-events: none;
+		}
+
+		.marker-layer {
+			overflow: visible;
+
+			.active-line {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				background: $activeLineColor;
+			}
+
+			.select-line {
+				position: absolute;
+				background: $selectLineColor;
+				width: 100%;
+				transform: translateZ(0);
+			}
+		}
+
+		.text-layer {
+			font-family: inherit;
+
+			.line {
+				position: absolute;
+				top: 0;
+				left: 0;
+				font-family: inherit;
+
+				span {
+					font-family: inherit;
+				}
+
+				.text {
+					color: #A9B7C6;
+				}
+
+				.exclude-sign {
+					color: #5397BB;
+				}
+
+				.url {
+					color: #CC7832;
+				}
+
+				.separator {
+					color: #BABABA;
+				}
+
+				.element {
+					color: #E8BF6A;
+				}
+
+				.bracket {
+					color: #BABABA;
+				}
+
+				.prop {
+					color: #9876AA;
+				}
+
+				.equal {
+					color: #BABABA;
+				}
+
+				.value {
+					color: #A5C261;
+				}
+
+			}
+		}
+
+		.cursor-layer {
+			z-index: 4;
+
+			.cursor {
+				z-index: 4;
+				position: absolute;
+				box-sizing: border-box;
+				border-left: 2px solid #F8F8F0;
+				transform: translatez(0);
+			}
+		}
+		//}
+	}
+
+	.scrollbar-layer {
+		position: absolute;
+		left: 0;
+		top: 0;
+		pointer-events: none;
+
+		& .scrollbar-wrap {
+			position: absolute;
+			z-index: 9;
+			cursor: pointer;
+			pointer-events: all;
+		}
+
+		& .scrollbar {
+			position: absolute;
+			box-sizing: border-box;
+			background: rgba(255, 255, 255, .15);
+			border: 1px solid rgba(255, 255, 255, .05);
+			cursor: default;
+		}
+
+		& .scrollbar-wrap.active {
+			background: rgba(255, 255, 255, .05);
+			transition: background 450ms ease-out 0ms;
+		}
+
+		& .scrollbar-wrap.deactive {
+			transition: background 700ms ease-out 300ms;
+		}
+
+		& .scrollbar.active {
+			background: rgba(255, 255, 255, .25);
+			border: 1px solid rgba(255, 255, 255, .15);
+			transition: background 450ms ease-out 0ms, border 450ms ease-out 0ms;
+		}
+
+		& .scrollbar.deactive {
+			transition: background 700ms ease-out 300ms, border 700ms ease-out 300ms;
+		}
+
+		.scrollbar-wrap-x {
+			left: 0;
+			bottom: 0;
+			width: 100%;
+
+			.scrollbar-x {
+				left: 0;
+				top: 0;
+				width: 100%;
+			}
+		}
+
+		.scrollbar-wrap-y {
+			top: 0;
+			right: 0;
+			height: 100%;
+
+			.scrollbar-y {
+				top: 0;
+				left: 0;
+				height: 100%;
+			}
+		}
+
+	}
+
+	.testCharWidthDiv {
+		height: auto;
+		width: auto;
+		top: 0px;
+		left: 0px;
+		visibility: hidden;
+		position: absolute;
+		white-space: pre;
+		font-style: inherit;
+		font-variant: inherit;
+		font-weight: inherit;
+		font-stretch: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		font-family: inherit;
+		overflow: visible;
+	}
+
+	&.gutter-left {
+		.gutter {
+			left: 0;
+		}
+	}
+
+	&.gutter-right {
+		.gutter {
+			right: 0;
+		}
+	}
+}

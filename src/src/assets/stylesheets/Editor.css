@@ -1,0 +1,229 @@
+/* line 2, ../sass/Editor.scss */
+.Editor {
+  width: 100%;
+  height: 100%;
+  background: #2B2B2B;
+  font-family: consola, sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+/* line 10, ../sass/Editor.scss */
+.Editor .gutter {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background: #f0f0f0;
+  font-family: inherit;
+}
+/* line 18, ../sass/Editor.scss */
+.Editor .scroller {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: text;
+  font-family: inherit;
+}
+/* line 35, ../sass/Editor.scss */
+.Editor .scroller .text-input {
+  position: absolute;
+  z-index: 999;
+  opacity: 0;
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  padding: 0;
+  width: 0;
+  height: 0;
+}
+/* line 51, ../sass/Editor.scss */
+.Editor .scroller .layer {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: pre;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+/* line 63, ../sass/Editor.scss */
+.Editor .scroller .marker-layer {
+  overflow: visible;
+}
+/* line 66, ../sass/Editor.scss */
+.Editor .scroller .marker-layer .active-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: #323232;
+}
+/* line 73, ../sass/Editor.scss */
+.Editor .scroller .marker-layer .select-line {
+  position: absolute;
+  background: #214283;
+  width: 100%;
+  transform: translateZ(0);
+}
+/* line 81, ../sass/Editor.scss */
+.Editor .scroller .text-layer {
+  font-family: inherit;
+}
+/* line 84, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: inherit;
+}
+/* line 90, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line span {
+  font-family: inherit;
+}
+/* line 94, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .text {
+  color: #A9B7C6;
+}
+/* line 98, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .exclude-sign {
+  color: #5397BB;
+}
+/* line 102, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .url {
+  color: #CC7832;
+}
+/* line 106, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .separator {
+  color: #BABABA;
+}
+/* line 110, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .element {
+  color: #E8BF6A;
+}
+/* line 114, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .bracket {
+  color: #BABABA;
+}
+/* line 118, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .prop {
+  color: #9876AA;
+}
+/* line 122, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .equal {
+  color: #BABABA;
+}
+/* line 126, ../sass/Editor.scss */
+.Editor .scroller .text-layer .line .value {
+  color: #A5C261;
+}
+/* line 133, ../sass/Editor.scss */
+.Editor .scroller .cursor-layer {
+  z-index: 4;
+}
+/* line 136, ../sass/Editor.scss */
+.Editor .scroller .cursor-layer .cursor {
+  z-index: 4;
+  position: absolute;
+  box-sizing: border-box;
+  border-left: 2px solid #F8F8F0;
+  transform: translatez(0);
+}
+/* line 147, ../sass/Editor.scss */
+.Editor .scrollbar-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+/* line 153, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar-wrap {
+  position: absolute;
+  z-index: 9;
+  cursor: pointer;
+  pointer-events: all;
+}
+/* line 160, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar {
+  position: absolute;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: default;
+}
+/* line 168, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar-wrap.active {
+  background: rgba(255, 255, 255, 0.05);
+  transition: background 450ms ease-out 0ms;
+}
+/* line 173, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar-wrap.deactive {
+  transition: background 700ms ease-out 300ms;
+}
+/* line 177, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar.active {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 450ms ease-out 0ms, border 450ms ease-out 0ms;
+}
+/* line 183, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar.deactive {
+  transition: background 700ms ease-out 300ms, border 700ms ease-out 300ms;
+}
+/* line 187, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar-wrap-x {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+/* line 192, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar-wrap-x .scrollbar-x {
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+/* line 199, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar-wrap-y {
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+/* line 204, ../sass/Editor.scss */
+.Editor .scrollbar-layer .scrollbar-wrap-y .scrollbar-y {
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+/* line 213, ../sass/Editor.scss */
+.Editor .testCharWidthDiv {
+  height: auto;
+  width: auto;
+  top: 0px;
+  left: 0px;
+  visibility: hidden;
+  position: absolute;
+  white-space: pre;
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  overflow: visible;
+}
+/* line 232, ../sass/Editor.scss */
+.Editor.gutter-left .gutter {
+  left: 0;
+}
+/* line 238, ../sass/Editor.scss */
+.Editor.gutter-right .gutter {
+  right: 0;
+}

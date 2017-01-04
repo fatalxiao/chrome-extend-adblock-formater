@@ -1,0 +1,107 @@
+/* line 2, ../sass/Action.scss */
+.Action {
+  position: absolute;
+  left: calc(50% - 100px);
+  top: calc(50% - 80px);
+  width: 200px;
+}
+/* line 8, ../sass/Action.scss */
+.Action button {
+  position: absolute;
+  cursor: pointer;
+  background: #42A5F5;
+  border: 0;
+  border-radius: 2px;
+  outline: none;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px, rgba(0, 0, 0, 0.2) 0px 1px 4px;
+  color: #fff;
+}
+/* line 19, ../sass/Action.scss */
+.Action button i::before {
+  text-align: center;
+}
+/* line 23, ../sass/Action.scss */
+.Action button:hover {
+  background: #2a99f4;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 18px, rgba(0, 0, 0, 0.2) 0px 1px 12px;
+}
+/* line 28, ../sass/Action.scss */
+.Action button:active {
+  background: #128ef2;
+  box-shadow: transparent 0px 1px 6px, transparent 0px 1px 4px;
+}
+/* line 33, ../sass/Action.scss */
+.Action button[disabled] {
+  background: #2c2e30;
+  color: #3d4042;
+  border: 1px solid #2a2b2d;
+  box-shadow: none;
+  cursor: auto;
+}
+/* line 41, ../sass/Action.scss */
+.Action button[disabled]:hover {
+  background: #2c2e30;
+}
+/* line 45, ../sass/Action.scss */
+.Action button[disabled]:active {
+  background: #2c2e30;
+}
+/* line 50, ../sass/Action.scss */
+.Action .actions {
+  width: 200px;
+  height: 90px;
+}
+/* line 54, ../sass/Action.scss */
+.Action .actions .ResetButton {
+  top: 0;
+  left: 85px;
+}
+/* line 59, ../sass/Action.scss */
+.Action .actions .UndoButton {
+  top: 50px;
+  left: 0;
+}
+/* line 64, ../sass/Action.scss */
+.Action .actions .FormatButton {
+  top: 40px;
+  left: 40px;
+}
+/* line 69, ../sass/Action.scss */
+.Action .actions .RedoButton {
+  top: 50px;
+  right: 0;
+}
+/* line 75, ../sass/Action.scss */
+.Action .result {
+  width: 200px;
+}
+/* line 78, ../sass/Action.scss */
+.Action .result .formatInfo {
+  width: 200px;
+  margin-top: 12px;
+  font-size: 16px;
+}
+/* line 83, ../sass/Action.scss */
+.Action .result .formatInfo .formatCount, .Action .result .formatInfo .distinctCount {
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: #555;
+}
+/* line 90, ../sass/Action.scss */
+.Action .result .formatInfo .formatCount .count, .Action .result .formatInfo .distinctCount .count {
+  color: #42A5F5;
+  font-weight: bold;
+  margin-left: 6px;
+}
+/* line 97, ../sass/Action.scss */
+.Action .result .formatInfo.hidden {
+  display: none;
+}
+/* line 102, ../sass/Action.scss */
+.Action .result .CopyButton {
+  position: static;
+  margin: 10px 80px 0;
+}

@@ -1,0 +1,17 @@
+.App {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+	.Editor {
+		position: absolute;
+
+		&.source {
+			left: 0;
+		}
+
+		&.result {
+			right: 0;
+		}
+	}
+}

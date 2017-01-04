@@ -1,0 +1,11 @@
+/* line 2, ../sass/ResetButton.scss */
+.ResetButton {
+  width: 30px;
+  height: 30px;
+}
+/* line 6, ../sass/ResetButton.scss */
+.ResetButton i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+}

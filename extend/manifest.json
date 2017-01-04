@@ -1,0 +1,26 @@
+{
+	"name": "AdBlock Format",
+	"version": "2.0",
+	"description": "AdBlock format",
+	"icons": {
+		"128": "icons/icon128.png",
+		"16": "icons/icon16.png",
+		"48": "icons/icon48.png"
+	},
+	"manifest_version": 2,
+	"background": {
+		"scripts": [
+			"background/background.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": {
+			"19": "icons/icon19.png",
+			"38": "icons/icon38.png"
+		},
+		"default_title": "Adblock Format 3.0"
+	},
+	"permissions": [
+		"tabs"
+	]
+}

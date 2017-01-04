@@ -1,0 +1,14 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+src/node_modules
+src/src/assets/.sass-cache
+
+# Idea project files
+.idea
+
+# windows thumbnail cache
+Thumbs.db

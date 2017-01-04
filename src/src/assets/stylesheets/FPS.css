@@ -1,0 +1,14 @@
+/* line 2, ../sass/FPS.scss */
+.FPS {
+  width: 60px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -30px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 20px;
+  color: #42A5F5;
+  z-index: 99;
+}

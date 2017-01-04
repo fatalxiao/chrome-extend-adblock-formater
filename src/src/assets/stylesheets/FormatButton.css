@@ -1,0 +1,13 @@
+/* line 2, ../sass/FormatButton.scss */
+.FormatButton {
+  width: 120px;
+  height: 50px;
+}
+/* line 6, ../sass/FormatButton.scss */
+.FormatButton i {
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
